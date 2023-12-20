@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card">
+        <table class="table" id="unblock">
+            <tr class="table-active">
+                <th scope="col">Account Number</th>
+                <th scope="col">Account Holder Name</th>
+                <th scope="col">Operation</th>
+            </tr>
+            <tr *ngFor="let users of user">
+                <td>{{users.accountNumber}}</td>
+                <td>{{users.userName}}</td>
+                <td>
+                    <button (click)="unblock(users.userId)" class="bg-danger btn btn-danger">Unblock user</button>
+                </td>
+            </tr>
+        </table>
+    </div>  
+</div>
